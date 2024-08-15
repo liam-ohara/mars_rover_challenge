@@ -53,9 +53,9 @@ class PlateauCreationParserTest {
 
         // Assert
         assertThrowsExactly(InputMismatchException.class, () -> PlateauCreationParser.parseInput(plateauInput));
-
-
     }
+
+
 
 
 
