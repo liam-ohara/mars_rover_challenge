@@ -1,7 +1,7 @@
 package Inputs.Parsers;
 
-public class RoverCreationParser implements InputParser {
-    @Override
+public class RoverCreationParser  {
+
     public void parseInput(String input) {
 
     }

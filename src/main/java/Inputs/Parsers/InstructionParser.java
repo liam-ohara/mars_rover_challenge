@@ -1,7 +1,7 @@
 package Inputs.Parsers;
 
-public class InstructionParser implements InputParser {
-    @Override
+public class InstructionParser  {
+
     public void parseInput(String input) {
 
     }
