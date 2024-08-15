@@ -59,6 +59,7 @@ class RoverCreationParserTest {
 
     assertAll(
                 () -> assertThrowsExactly(InputMismatchException.class, () -> RoverCreationParser.parseInput(invalidInput)),
+            () -> assertThrowsExactly(InputMismatchException.class, () -> RoverCreationParser.parseInput(invalidInput1)),
             () -> assertThrowsExactly(InputMismatchException.class, () -> RoverCreationParser.parseInput(invalidInput2)),
             () -> assertThrowsExactly(InputMismatchException.class, () -> RoverCreationParser.parseInput(invalidInput3)),
             () -> assertThrowsExactly(InputMismatchException.class, () -> RoverCreationParser.parseInput(invalidInput4)),
