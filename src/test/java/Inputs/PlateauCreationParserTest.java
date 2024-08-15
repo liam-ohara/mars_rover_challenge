@@ -27,5 +27,20 @@ class PlateauCreationParserTest {
 
     }
 
+    @Test
+    @DisplayName("Returns null when provided an empty string")
+    void testPlateauCreationParserParseInput_WithEmptyInput() {
+        // Arrange
+        String emptyInput = "";
+
+        //Act
+        PlateauSize result = PlateauCreationParser.parseInput(emptyInput);
+
+        //Assert
+        assertNull(result);
+
+    }
+
+
 
 }
