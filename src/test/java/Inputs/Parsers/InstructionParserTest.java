@@ -52,4 +52,32 @@ class InstructionParserTest {
 
     }
 
+    @Test
+    @DisplayName("Returns valid instruction when provided with single lowercase instructions")
+    void testInstructionParserParseInput_WithLowercaseInputs() {
+        // Arrange
+
+        String left = "l";
+        String right = "r";
+        String move = "m";
+
+        Instruction turnLeft = Instruction.L;
+        Instruction turnRight = Instruction.R;
+        Instruction makeMove = Instruction.M;
+
+        // Act
+
+        Instruction result = InstructionParser.parseInput(left);
+        Instruction result2 = InstructionParser.parseInput(right);
+        Instruction result3 = InstructionParser.parseInput(move);
+
+        // Assert
+
+        assertAll(
+                () -> assertEquals(turnLeft, result),
+                () -> assertEquals(turnRight, result2),
+                () -> assertEquals(makeMove, result3));
+
+    }
+
 }
