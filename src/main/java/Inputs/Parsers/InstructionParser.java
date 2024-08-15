@@ -1,9 +1,12 @@
 package Inputs.Parsers;
 
 import Inputs.Instruction;
+import java.util.List;
+import java.util.ArrayList;
+
 
 import java.util.InputMismatchException;
-import java.util.regex.Pattern;
+
 
 public class InstructionParser  {
 
@@ -30,6 +33,9 @@ public class InstructionParser  {
                         case "M":
                             result = Instruction.M;
                             break;
+
+                        default:
+                            throw new InputMismatchException();
                     }
                 } else {
                     throw new InputMismatchException();
@@ -39,6 +45,18 @@ public class InstructionParser  {
                     throw new InputMismatchException ("Instructions must contain only 'L', 'R' or 'M' characters without spaces");
                 }
         return result;
+    }
+
+    public static List<Instruction> parseInstructions (String input) {
+
+        List<Instruction> instructions = new ArrayList<>();
+        if (input.isBlank()) {
+            return null;
+        }
+        for (int i = 0; i < input.length(); i++) {
+            instructions.add(parseInput(String.valueOf(input.charAt(i))));
+        }
+        return instructions;
     }
 
 

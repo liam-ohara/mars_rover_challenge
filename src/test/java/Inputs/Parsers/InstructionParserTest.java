@@ -4,7 +4,9 @@ import Inputs.Instruction;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
 import java.util.InputMismatchException;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -101,6 +103,35 @@ class InstructionParserTest {
                 () -> assertThrowsExactly(InputMismatchException.class, () -> InstructionParser.parseInput(invalidLetter)),
                 () -> assertThrowsExactly(InputMismatchException.class, () -> InstructionParser.parseInput(digit)),
                 () -> assertThrowsExactly(InputMismatchException.class, () -> InstructionParser.parseInput(punctuation)));
+    }
+
+    @Test
+    @DisplayName("Returns valid List<Instruction> when provided with string of multiple instructions")
+    void testInstructionParserParseInput_WithMultipleInputs() {
+        // Arrange
+
+        String instructions = "LMLMLMLMM";
+
+        List<Instruction> listOfInstructions = new ArrayList<>();
+        listOfInstructions.add(Instruction.L);
+        listOfInstructions.add(Instruction.M);
+        listOfInstructions.add(Instruction.L);
+        listOfInstructions.add(Instruction.M);
+        listOfInstructions.add(Instruction.L);
+        listOfInstructions.add(Instruction.M);
+        listOfInstructions.add(Instruction.L);
+        listOfInstructions.add(Instruction.M);
+        listOfInstructions.add(Instruction.M);
+
+
+        // Act
+
+        List<Instruction> result = InstructionParser.parseInstructions(instructions);
+
+        // Assert
+
+        assertEquals(listOfInstructions, result);
+
     }
 
 }
