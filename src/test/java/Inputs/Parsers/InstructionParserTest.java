@@ -82,6 +82,24 @@ class InstructionParserTest {
 
     }
 
+    @Test
+    @DisplayName("Returns InputMisMatchException when passed input string that does not contain valid characters.")
+    void testInstructionParserParseInput_WithInvalidCharacters() {
 
+        // Arrange
+
+        String invalidLetter = "a";
+        String digit = "1";
+        String punctuation = "!";
+
+
+        // Act and Assert
+
+        assertAll(
+
+                () -> assertThrowsExactly(InputMismatchException.class, () -> InstructionParser.parseInput(invalidLetter)),
+                () -> assertThrowsExactly(InputMismatchException.class, () -> InstructionParser.parseInput(digit)),
+                () -> assertThrowsExactly(InputMismatchException.class, () -> InstructionParser.parseInput(punctuation)));
+    }
 
 }
