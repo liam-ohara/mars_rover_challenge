@@ -1,6 +1,6 @@
 package Inputs;
 
 public class PlateauSize {
-    private int lastXCoordinate;
-    private int lastYCoordinate;
+    private int xSize;
+    private int ySize;
 }
