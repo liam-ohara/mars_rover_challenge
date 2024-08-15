@@ -5,6 +5,26 @@ import Inputs.Instruction;
 public class InstructionParser  {
 
     public static Instruction parseInput(String input) {
-        return null;
+
+        Instruction result = null;
+
+        if (input.isBlank()) {
+            return null;
+        }
+        switch (input) {
+            case "L":
+                result = Instruction.L;
+                break;
+
+            case "R":
+                result = Instruction.R;
+                break;
+
+            case "M":
+                result = Instruction.M;
+                break;
+        }
+
+        return result;
     }
 }
