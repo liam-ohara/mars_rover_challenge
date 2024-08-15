@@ -3,6 +3,9 @@ package Inputs;
 import Inputs.Parsers.PlateauCreationParser;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+
+import java.util.InputMismatchException;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class PlateauCreationParserTest {
@@ -38,6 +41,19 @@ class PlateauCreationParserTest {
 
         //Assert
         assertNull(result);
+
+    }
+
+    @Test
+    @DisplayName("Returns InputMisMatchException when passed input without digits")
+    void testPlateauCreationParserParseInput_WithNoDigitsInInput() {
+
+        // Arrange
+        String plateauInput = "a b";
+
+        // Assert
+        assertThrowsExactly(InputMismatchException.class, () -> PlateauCreationParser.parseInput(plateauInput));
+
 
     }
 
