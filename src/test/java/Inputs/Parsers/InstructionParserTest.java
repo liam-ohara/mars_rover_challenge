@@ -4,6 +4,8 @@ import Inputs.Instruction;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.util.InputMismatchException;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class InstructionParserTest {
@@ -79,5 +81,7 @@ class InstructionParserTest {
                 () -> assertEquals(makeMove, result3));
 
     }
+
+
 
 }

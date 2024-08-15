@@ -11,7 +11,7 @@ public class InstructionParser  {
         if (input.isBlank()) {
             return null;
         }
-        switch (input) {
+        switch (input.toUpperCase()) {
             case "L":
                 result = Instruction.L;
                 break;
