@@ -9,7 +9,7 @@ public class PlateauCreationParser implements InputParser {
     }
 
     public PlateauSize getPlateauSize() {
-        return plateauSize;
+        return this.plateauSize;
     }
 
     @Override
