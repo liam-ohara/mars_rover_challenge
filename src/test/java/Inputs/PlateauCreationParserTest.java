@@ -1,5 +1,6 @@
 package Inputs;
 
+import Inputs.Parsers.PlateauCreationParser;
 import org.junit.jupiter.api.Test;
 
 class PlateauCreationParserTest {

@@ -1,4 +1,6 @@
-package Inputs;
+package Inputs.Parsers;
+
+import Inputs.PlateauSize;
 
 public class PlateauCreationParser implements InputParser {
 

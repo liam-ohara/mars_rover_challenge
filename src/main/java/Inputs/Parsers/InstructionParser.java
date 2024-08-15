@@ -1,4 +1,4 @@
-package Inputs;
+package Inputs.Parsers;
 
 public class InstructionParser implements InputParser {
     @Override
