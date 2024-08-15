@@ -1,8 +1,12 @@
 package Inputs.Parsers;
 
+import Inputs.Position;
+
 public class RoverCreationParser  {
 
-    public void parseInput(String input) {
+    public static Position parseInput(String input) {
+
+        return null;
 
     }
 }
