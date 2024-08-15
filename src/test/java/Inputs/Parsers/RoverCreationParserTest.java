@@ -6,6 +6,8 @@ import Inputs.Position;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.util.InputMismatchException;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class RoverCreationParserTest {
@@ -39,4 +41,27 @@ class RoverCreationParserTest {
         // Assert
         assertEquals(startPosition, result);
     }
+
+    @Test
+    @DisplayName("Returns InputMisMatchException when passed input in invalid form")
+    void testRoverCreationParserParseInput_WithInvalidInputs() {
+
+    // Arrange
+    String invalidInput = "12N";
+    String invalidInput1 = "1N";
+    String invalidInput2 = "1 2N";
+    String invalidInput3 = "12 N";
+    String invalidInput4 = "121";
+    String invalidInput5 = "NNN";
+
+
+    // Act and Assert
+
+    assertAll(
+                () -> assertThrowsExactly(InputMismatchException.class, () -> RoverCreationParser.parseInput(invalidInput)),
+            () -> assertThrowsExactly(InputMismatchException.class, () -> RoverCreationParser.parseInput(invalidInput2)),
+            () -> assertThrowsExactly(InputMismatchException.class, () -> RoverCreationParser.parseInput(invalidInput3)),
+            () -> assertThrowsExactly(InputMismatchException.class, () -> RoverCreationParser.parseInput(invalidInput4)),
+            () -> assertThrowsExactly(InputMismatchException.class, () -> RoverCreationParser.parseInput(invalidInput5)));
+}
 }

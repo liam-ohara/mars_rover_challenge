@@ -14,6 +14,8 @@ public class RoverCreationParser {
         if (input.isBlank()) {
             return null;
         }
+
+        //Regex= ^\d\s\d[NESW]
         String[] inputArray = input.split("\\s");
         x = Integer.parseInt(inputArray[0]);
         y = Integer.parseInt(inputArray[1]);
