@@ -16,9 +16,10 @@ public class PlateauCreationParser {
         }
 
         try {
-            if (input.matches("^\\d\\s\\d")) {
-                x = Character.getNumericValue(input.charAt(0));
-                y = Character.getNumericValue(input.charAt(input.length() - 1));
+            if (input.matches("^\\d*\\s\\d*")) {
+                String[] inputArray = input.split("\\s");
+                x = Integer.parseInt(inputArray[0]);
+                y = Integer.parseInt(inputArray[1]);
             } else {
                 throw new InputMismatchException();
             }
