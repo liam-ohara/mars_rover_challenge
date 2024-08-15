@@ -1,8 +1,10 @@
 package Inputs.Parsers;
 
+import Inputs.Instruction;
+
 public class InstructionParser  {
 
-    public void parseInput(String input) {
-
+    public static Instruction parseInput(String input) {
+        return null;
     }
 }
