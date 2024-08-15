@@ -55,8 +55,16 @@ class PlateauCreationParserTest {
         assertThrowsExactly(InputMismatchException.class, () -> PlateauCreationParser.parseInput(plateauInput));
     }
 
+    @Test
+    @DisplayName("Returns InputMisMatchException when passed input not separated by space")
+    void testPlateauCreationParserParseInput_WithoutDelimiter() {
 
+        // Arrange
+        String withDelimiterInput = "22";
 
+        // Assert
+        assertThrowsExactly(InputMismatchException.class, () -> PlateauCreationParser.parseInput(withDelimiterInput));
 
+    }
 
 }
