@@ -2,6 +2,9 @@ package Inputs.Parsers;
 
 import Inputs.Instruction;
 
+import java.util.InputMismatchException;
+import java.util.regex.Pattern;
+
 public class InstructionParser  {
 
     public static Instruction parseInput(String input) {
@@ -11,20 +14,33 @@ public class InstructionParser  {
         if (input.isBlank()) {
             return null;
         }
-        switch (input.toUpperCase()) {
-            case "L":
-                result = Instruction.L;
-                break;
+        try {
 
-            case "R":
-                result = Instruction.R;
-                break;
+            if (input.toUpperCase().matches("^(L*R*M*)*")) {
 
-            case "M":
-                result = Instruction.M;
-                break;
-        }
+                    switch (input.toUpperCase()) {
+                        case "L":
+                            result = Instruction.L;
+                            break;
 
+                        case "R":
+                            result = Instruction.R;
+                            break;
+
+                        case "M":
+                            result = Instruction.M;
+                            break;
+                    }
+                } else {
+                    throw new InputMismatchException();
+                }
+            }
+                 catch (InputMismatchException e) {
+                    throw new InputMismatchException ("Instructions must contain only 'L', 'R' or 'M' characters without spaces");
+                }
         return result;
     }
-}
+
+
+    }
+
