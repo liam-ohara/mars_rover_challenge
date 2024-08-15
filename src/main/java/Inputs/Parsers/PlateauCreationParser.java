@@ -16,7 +16,7 @@ public class PlateauCreationParser {
         }
 
         try {
-            if (input.matches(".*\\d.*")) {
+            if (input.matches("^\\d\\s\\d")) {
                 x = Character.getNumericValue(input.charAt(0));
                 y = Character.getNumericValue(input.charAt(input.length() - 1));
             } else {

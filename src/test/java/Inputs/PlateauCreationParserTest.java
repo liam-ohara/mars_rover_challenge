@@ -15,7 +15,7 @@ class PlateauCreationParserTest {
     void testPlateauCreationParserParseInput_WithValidInput() {
         // Arrange
         String plateauInput = "5 5";
-        String plateauInput2 = "22";
+        String plateauInput2 = "2 2";
         PlateauSize plateauSize = new PlateauSize(5, 5);
         PlateauSize plateauSize2 = new PlateauSize(2, 2);
 
@@ -66,5 +66,7 @@ class PlateauCreationParserTest {
         assertThrowsExactly(InputMismatchException.class, () -> PlateauCreationParser.parseInput(withDelimiterInput));
 
     }
+
+
 
 }
