@@ -32,7 +32,7 @@ public class Plateau {
         }
     }
 
-    public List<Rover> getListOfRovers () {
+    public static List<Rover> getListOfRovers () {
         if (listOfRovers == null) {
             return null;
         } else {

@@ -45,8 +45,6 @@ class RoverTest {
         Position newPosition3 = new Position(1, 1, E);
         Position newPosition4 = new Position(1, 1, N);
 
-
-
         //Act
         rover.moveRover(instruction);
         Position result = rover.getRoverPosition();
@@ -58,7 +56,6 @@ class RoverTest {
         Position result4 = rover.getRoverPosition();
 
         //Assert
-
         assertAll(
                 () -> assertEquals(newPosition, result),
                 () -> assertEquals(newPosition2, result2),
