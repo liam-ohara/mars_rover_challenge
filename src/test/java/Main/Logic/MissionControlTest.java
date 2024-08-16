@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class MissionControlTest {
 
     @Test
-    @DisplayName("Returns false when passed empty plateau")
+    @DisplayName("Returns true when passed empty plateau")
     void testIsPositionEmpty_WithPlateauNoRovers() {
         // Arrange
         PlateauSize plateauSize = new PlateauSize(10, 10);
