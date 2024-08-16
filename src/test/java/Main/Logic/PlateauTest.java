@@ -17,8 +17,13 @@ class PlateauTest {
     @DisplayName("Returns null when there are no rovers added to listOfRovers in Plateau class.")
     void testGetListOfRovers_WithNoRovers () {
 
+        //Arrange
+        PlateauSize plateauSize = new PlateauSize(10, 10);
+        Plateau plateau = new Plateau("Icaria Planum", plateauSize);
+
+
         //Act
-        List<Rover> result = Plateau.getListOfRovers();
+        List<Rover> result = plateau.getListOfRovers();
 
         //Assert
         assertNull(result);
@@ -38,7 +43,7 @@ class PlateauTest {
 
         //Act
         plateau.addRover(rover);
-        List<Rover> result = Plateau.getListOfRovers();
+        List<Rover> result = plateau.getListOfRovers();
 
         //Assert
         assertEquals(listOfRovers, result);
@@ -70,7 +75,7 @@ class PlateauTest {
         plateau.addRover(rover);
         plateau.addRover(rover2);
         plateau.addRover(rover3);
-        List<Rover> result = Plateau.getListOfRovers();
+        List<Rover> result = plateau.getListOfRovers();
 
         //Assert
         assertEquals(listOfRovers, result);

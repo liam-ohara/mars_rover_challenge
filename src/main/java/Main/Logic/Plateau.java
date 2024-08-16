@@ -8,7 +8,7 @@ import java.util.List;
 public class Plateau {
     private String plateauName;
     private PlateauSize plateauSize;
-    private static List<Rover> listOfRovers;
+    private List<Rover> listOfRovers;
 
     public Plateau (String plateauName, PlateauSize plateauSize) {
         this.plateauName = plateauName;
@@ -24,19 +24,19 @@ public class Plateau {
     }
 
     public void addRover (Rover rover) {
-        if (listOfRovers == null) {
-            listOfRovers = new ArrayList<>();
-            listOfRovers.add(rover);
+        if (this.listOfRovers == null) {
+            this.listOfRovers = new ArrayList<>();
+            this.listOfRovers.add(rover);
         } else {
-            listOfRovers.add(rover);
+            this.listOfRovers.add(rover);
         }
     }
 
-    public static List<Rover> getListOfRovers () {
-        if (listOfRovers == null) {
+    public List<Rover> getListOfRovers() {
+        if (this.listOfRovers == null) {
             return null;
         } else {
-            return listOfRovers;
+            return this.listOfRovers;
         }
     }
 }
