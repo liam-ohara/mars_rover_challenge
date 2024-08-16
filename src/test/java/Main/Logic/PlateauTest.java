@@ -26,7 +26,7 @@ class PlateauTest {
 
 
     @Test
-    @DisplayName("Returns list containing single rover when passed a single rover.")
+    @DisplayName("Adds single rover to a List<Rover> on plateau.")
     void testAddRover_WithSingleRover() {
         //Arrange
         PlateauSize plateauSize = new PlateauSize(10, 10);
@@ -46,7 +46,7 @@ class PlateauTest {
     }
 
     @Test
-    @DisplayName("Returns list containing multiple rovers when passed multiple rovers.")
+    @DisplayName("Adds multiple rovers to a List<Rover> on plateau.")
     void testAddRover_WithMultipleRovers() {
         //Arrange
         PlateauSize plateauSize = new PlateauSize(10, 10);
@@ -70,6 +70,7 @@ class PlateauTest {
 
         //Assert
         assertEquals(listOfRovers, result);
-
     }
+
+
 }
