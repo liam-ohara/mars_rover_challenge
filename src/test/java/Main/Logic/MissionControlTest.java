@@ -32,7 +32,7 @@ class MissionControlTest {
     }
 
     @Test
-    @DisplayName("Returns true when passed coordinates in plateau no occupied by a rover")
+    @DisplayName("Returns true when passed coordinates in plateau not occupied by a rover")
     void testIsPositionEmpty_WithPlateauRoversUnOccupiedCoordinates() {
 
         // Arrange
@@ -57,6 +57,35 @@ class MissionControlTest {
 
         // Assert
         assertTrue(result);
+
+    }
+
+    @Test
+    @DisplayName("Returns false when passed coordinates in plateau occupied by a rover")
+    void testIsPositionEmpty_WithPlateauRoversOccupiedCoordinates() {
+
+        // Arrange
+        PlateauSize plateauSize = new PlateauSize(10, 10);
+        Plateau plateau = new Plateau("Icaria Planum", plateauSize);
+        int xCoordinateToCheck = 1;
+        int yCoordinateToCheck = 1;
+
+        //Add rovers
+        Position roverLandingSite = new Position(1, 1, N);
+        Position roverLandingSite2 = new Position(5, 5, S);
+
+        Rover rover = new Rover("Sojourner", roverLandingSite);
+        Rover rover2 = new Rover("Opportunity", roverLandingSite2);
+
+
+        plateau.addRover(rover);
+        plateau.addRover(rover2);
+
+        // Act
+        boolean result = MissionControl.isPositionEmpty(plateau, xCoordinateToCheck, yCoordinateToCheck);
+
+        // Assert
+        assertFalse(result);
 
     }
 }
