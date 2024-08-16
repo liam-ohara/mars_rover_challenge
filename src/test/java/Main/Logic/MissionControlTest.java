@@ -90,7 +90,7 @@ class MissionControlTest {
     }
 
     @Test
-    @DisplayName("Return false when provided with coordinate within size of plateau.")
+    @DisplayName("Return false when provided with coordinates within size of plateau.")
     void testAreCoordinatesOutOfBounds_WithCoordinatesWithinPlateauSize() {
         // Arrange
 
@@ -105,5 +105,23 @@ class MissionControlTest {
 
         // Assert
         assertFalse(result);
+    }
+
+    @Test
+    @DisplayName("Return true when provided with coordinates outside size of plateau.")
+    void testAreCoordinatesOutOfBounds_WithCoordinatesOutsidePlateauSize() {
+        // Arrange
+
+        PlateauSize plateauSize = new PlateauSize(10, 10);
+        Plateau plateau = new Plateau("Icaria Planum", plateauSize);
+
+        int xCoordinateToCheck = 10;
+        int yCoordinateToCheck = 10;
+
+        // Act
+        boolean result = MissionControl.areCoordinatesOutOfBounds(plateau, xCoordinateToCheck, yCoordinateToCheck);
+
+        // Assert
+        assertTrue(result);
     }
 }
