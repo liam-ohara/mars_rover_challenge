@@ -1,12 +1,13 @@
 package Main.Logic;
 
-import Main.Position;
-
 public class MissionControl {
 
-    public static boolean isPositionEmpty (String plateauName, int x, int y) {
+    public static boolean isPositionEmpty (Plateau plateauName, int x, int y) {
 
-        return true;
+        if (plateauName.getListOfRovers() == null) {
+            return true;
+        }
+        return false;
     }
 
 }

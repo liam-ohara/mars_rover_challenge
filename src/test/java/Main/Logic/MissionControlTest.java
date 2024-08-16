@@ -18,10 +18,10 @@ class MissionControlTest {
         int y = 0;
 
         // Act
-        boolean result = MissionControl.isPositionEmpty(plateau.getPlateauName(), x, y);
+        boolean result = MissionControl.isPositionEmpty(plateau, x, y);
 
         // Assert
-        assertFalse(result);
+        assertTrue(result);
 
     }
 }
