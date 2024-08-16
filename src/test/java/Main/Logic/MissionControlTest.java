@@ -8,8 +8,8 @@ import org.junit.jupiter.api.DisplayName;
 import java.util.ArrayList;
 import java.util.List;
 
-import static Main.CompassDirection.N;
-import static Main.CompassDirection.S;
+import static Main.CompassDirection.*;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class MissionControlTest {
