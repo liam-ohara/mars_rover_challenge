@@ -67,10 +67,10 @@ class MissionControlTest {
         // Arrange
         PlateauSize plateauSize = new PlateauSize(10, 10);
         Plateau plateau = new Plateau("Icaria Planum", plateauSize);
+
         int xCoordinateToCheck = 1;
         int yCoordinateToCheck = 1;
 
-        //Add rovers
         Position roverLandingSite = new Position(1, 1, N);
         Position roverLandingSite2 = new Position(5, 5, S);
 
@@ -87,5 +87,23 @@ class MissionControlTest {
         // Assert
         assertFalse(result);
 
+    }
+
+    @Test
+    @DisplayName("Return false when provided with coordinate within size of plateau.")
+    void testAreCoordinatesOutOfBounds_WithCoordinatesWithinPlateauSize() {
+        // Arrange
+
+        PlateauSize plateauSize = new PlateauSize(10, 10);
+        Plateau plateau = new Plateau("Icaria Planum", plateauSize);
+
+        int xCoordinateToCheck = 1;
+        int yCoordinateToCheck = 1;
+
+        // Act
+        boolean result = MissionControl.areCoordinatesOutOfBounds(plateau, xCoordinateToCheck, yCoordinateToCheck);
+
+        // Assert
+        assertFalse(result);
     }
 }

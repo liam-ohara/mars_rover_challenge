@@ -39,8 +39,8 @@ public class MissionControl {
         return false;
     }
 
-    public static boolean areCoordinatesOutOfBounds (int x, int y) {
-        return false;
+    public static boolean areCoordinatesOutOfBounds (Plateau plateau, int x, int y) {
+        return true;
     }
 
 }
