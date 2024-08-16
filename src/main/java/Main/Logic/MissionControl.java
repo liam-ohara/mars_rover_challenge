@@ -16,14 +16,9 @@ public class MissionControl {
             return true;
         } else {
             Map<Integer, Integer> occupiedCoordinates = new HashMap<>();
-            List<String> roverNames = new ArrayList<>();
             List<Rover> listofRovers = new ArrayList<>();
             List<Position> occupiedPositions = new ArrayList<>();
             listofRovers = plateauName.getListOfRovers();
-
-            for (Rover i : listofRovers) {
-                roverNames.add(i.getRoverName());
-            }
 
             for (Rover j : listofRovers) {
                 occupiedPositions.add(j.getRoverPosition());
