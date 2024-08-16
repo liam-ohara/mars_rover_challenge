@@ -1,6 +1,6 @@
-package Inputs.Parsers;
+package Main.Inputs;
 
-import Inputs.PlateauSize;
+import Main.PlateauSize;
 
 import java.util.InputMismatchException;
 

@@ -1,7 +1,7 @@
-package Inputs.Parsers;
+package Main.Inputs;
 
-import Inputs.CompassDirection;
-import Inputs.Position;
+import Main.CompassDirection;
+import Main.Position;
 
 import java.util.InputMismatchException;
 

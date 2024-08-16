@@ -1,4 +1,4 @@
-package Inputs;
+package Main;
 
 public record Position(int x, int y, CompassDirection facing) {
 }

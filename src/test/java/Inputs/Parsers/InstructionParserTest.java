@@ -1,6 +1,7 @@
 package Inputs.Parsers;
 
-import Inputs.Instruction;
+import Main.Inputs.InstructionParser;
+import Main.Instruction;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

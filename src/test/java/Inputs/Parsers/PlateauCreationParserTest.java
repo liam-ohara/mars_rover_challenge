@@ -1,6 +1,7 @@
 package Inputs.Parsers;
 
-import Inputs.PlateauSize;
+import Main.Inputs.PlateauCreationParser;
+import Main.PlateauSize;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

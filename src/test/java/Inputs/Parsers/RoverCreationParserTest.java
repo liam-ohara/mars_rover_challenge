@@ -1,8 +1,8 @@
 package Inputs.Parsers;
 
-import Inputs.CompassDirection;
-import Inputs.Instruction;
-import Inputs.Position;
+import Main.CompassDirection;
+import Main.Inputs.RoverCreationParser;
+import Main.Position;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

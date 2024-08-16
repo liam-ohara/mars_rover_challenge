@@ -1,6 +1,6 @@
-package Inputs.Parsers;
+package Main.Inputs;
 
-import Inputs.Instruction;
+import Main.Instruction;
 import java.util.List;
 import java.util.ArrayList;
 

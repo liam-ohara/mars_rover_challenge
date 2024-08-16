@@ -1,4 +1,4 @@
-package Inputs;
+package Main;
 
 public enum CompassDirection {
     N,
