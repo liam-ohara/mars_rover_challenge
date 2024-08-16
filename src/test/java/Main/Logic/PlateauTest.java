@@ -37,7 +37,7 @@ class PlateauTest {
         PlateauSize plateauSize = new PlateauSize(10, 10);
         Plateau plateau = new Plateau("Icaria Planum", plateauSize);
         Position roverLandingSite = new Position(0, 0, N);
-        Rover rover = new Rover("Pathfinder", roverLandingSite);
+        Rover rover = new Rover("Sojourner", roverLandingSite);
         List<Rover> listOfRovers = new ArrayList<>();
         listOfRovers.add(rover);
 
