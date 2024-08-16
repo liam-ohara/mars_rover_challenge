@@ -1,5 +1,6 @@
 package Main.Logic;
 
+import Main.PlateauSize;
 import Main.Position;
 
 import java.util.ArrayList;
@@ -40,7 +41,25 @@ public class MissionControl {
     }
 
     public static boolean areCoordinatesOutOfBounds (Plateau plateau, int x, int y) {
-        return true;
-    }
 
+        PlateauSize plateauSize = plateau.getPlateauSize();
+        int maxXCoordinate = plateauSize.xSize() - 1;
+        int maxYCoordinate = plateauSize.ySize() - 1;
+
+
+        boolean isXOutOfBounds = false;
+        boolean isYOutOfBounds = false;
+
+        if (x > maxXCoordinate || x < 0) {
+            isXOutOfBounds = true;
+        }
+
+        if (y > maxYCoordinate || y < 0) {
+            isYOutOfBounds = true;
+        }
+
+        if (isXOutOfBounds || isYOutOfBounds) {
+            return true;
+        } else return false;
+    }
 }
