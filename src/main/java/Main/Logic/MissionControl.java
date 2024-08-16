@@ -4,9 +4,9 @@ import Main.Position;
 
 public class MissionControl {
 
-    public static boolean isPositionEmpty (Position position) {
+    public static boolean isPositionEmpty (String plateauName, int x, int y) {
 
-        return false;
+        return true;
     }
 
 }
