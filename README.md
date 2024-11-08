@@ -1,5 +1,5 @@
 # Mars Rover Challenge
-This is a small game written has part of the Northcoders Java Software Development bootcamp.
+This is a small game written as part of the Northcoders Java Software Development bootcamp.
 
 It was written to demonstrate the principles of object-oriented programming as well as test-driven development.
 
